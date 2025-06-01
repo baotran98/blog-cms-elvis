@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_info_block_buttons",
+  "info": {
+    "displayName": "button",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "turquoise",
+        "orange",
+        "beige"
+      ],
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "regex": "[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blog_article_paragraph_and_images",
+  "info": {
+    "displayName": "paragraphAndImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "paragraph": {
+      "type": "blocks",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "landScape": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "imageRight": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "imageCaption": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

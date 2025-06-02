@@ -386,6 +386,14 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
+    contentArticle: Schema.Attribute.DynamicZone<
+      [
+        'blog-article.head-line',
+        'blog-article.paragraph-and-image',
+        'blog-article.paragraph',
+        'blog-article.land-scape-image',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

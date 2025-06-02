@@ -39,6 +39,15 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "contentArticle": {
+      "type": "dynamiczone",
+      "components": [
+        "blog-article.head-line",
+        "blog-article.paragraph-and-image",
+        "blog-article.paragraph",
+        "blog-article.land-scape-image"
+      ]
     }
   }
 }

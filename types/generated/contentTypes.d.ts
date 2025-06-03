@@ -386,6 +386,15 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODAyNzE5OTksImp0aSI6IjA2NTM5M2E0LWU3ZmEtNDE1YS05ZGU5LWE1MTgzZjI1NWM1MCIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIiwiRTJQIiwiRTJXIl0sInZjIjoiMDhkNWM4MDUifQ.cgBzHMJqjz4pWRz9I-ZGf3NGxmstY4cuc4__RV5oWQK7nDOs7GLAov07qKzinAoB3chrjvbWmzzrnKlqqYGy0Q';
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     contentArticle: Schema.Attribute.DynamicZone<
       [
         'blog-article.head-line',

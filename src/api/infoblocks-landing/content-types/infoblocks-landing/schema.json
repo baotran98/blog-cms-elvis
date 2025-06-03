@@ -4,7 +4,8 @@
   "info": {
     "singularName": "infoblocks-landing",
     "pluralName": "infoblocks-landings",
-    "displayName": "Infoblocks Landing"
+    "displayName": "Infoblocks Landing",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::info-block.info-block"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
     }
   }
 }

@@ -487,6 +487,7 @@ export interface ApiInfoblocksLandingInfoblocksLanding
   extends Struct.SingleTypeSchema {
   collectionName: 'infoblocks_landings';
   info: {
+    description: '';
     displayName: 'Infoblocks Landing';
     pluralName: 'infoblocks-landings';
     singularName: 'infoblocks-landing';
@@ -509,6 +510,10 @@ export interface ApiInfoblocksLandingInfoblocksLanding
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
